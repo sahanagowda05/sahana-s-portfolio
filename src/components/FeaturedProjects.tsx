@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import './FeaturedProjects.css';
 import { MagicCard } from './MagicCard';
 
