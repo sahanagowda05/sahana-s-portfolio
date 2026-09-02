@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './BootSequence.css';
+import './Bootsequence.css';
 
 const LINES = [
   'Initializing interface...',
