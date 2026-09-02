@@ -17,7 +17,7 @@ interface BootSequenceProps {
   skip?: boolean;
 }
 
-export function BootSequence({ onComplete, skip = false }: BootSequenceProps) {
+export function Bootsequence({ onComplete, skip = false }: BootSequenceProps) {
   const [visibleCount, setVisibleCount] = useState(0);
 
   useEffect(() => {
