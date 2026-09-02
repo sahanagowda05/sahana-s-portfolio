@@ -33,7 +33,7 @@ const REPULSE_STRENGTH = 0.6;
 const RETURN_EASE = 0.02;
 const DRIFT_EASE = 0.0006;
 
-export function ParticleCanvas({
+export function Particlecanvas({
   converging = false,
   convergeTo = { x: 0.5, y: 0.42 },
   convergeProgress = 0,
