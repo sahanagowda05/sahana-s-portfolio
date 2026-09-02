@@ -20,7 +20,7 @@ export function Landing({ onEnter, transitioning }: LandingProps) {
 
   return (
     <div className="landing" aria-hidden={transitioning}>
-      <ParticleCanvas className="landing__particles" converging={transitioning} />
+      <Particlecanvas className="landing__particles" converging={transitioning} />
       <div className="landing__scrim" />
 
       <div className="landing__stage">
@@ -30,7 +30,7 @@ export function Landing({ onEnter, transitioning }: LandingProps) {
               key="boot"
               exit={{ opacity: 0, transition: { duration: 0.25 } }}
             >
-              <BootSequence onComplete={() => setBooted(true)} />
+              <Bootsequence onComplete={() => setBooted(true)} />
             </motion.div>
           ) : (
             <motion.div
@@ -38,7 +38,7 @@ export function Landing({ onEnter, transitioning }: LandingProps) {
               animate={{ opacity: transitioning ? 0 : 1 }}
               transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             >
-              <GlassPanel>
+              <Glasspanel>
                 <div className="landing__eyebrow">
                   <span className="landing__eyebrow-dot" />
                   building intelligent software
@@ -113,9 +113,9 @@ export function Landing({ onEnter, transitioning }: LandingProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.0, duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
                 >
-                  <EnterButton onEnter={onEnter} disabled={transitioning} />
+                  <Enterbutton onEnter={onEnter} disabled={transitioning} />
                 </motion.div>
-              </GlassPanel>
+              </Glasspanel>
             </motion.div>
           )}
         </AnimatePresence>
