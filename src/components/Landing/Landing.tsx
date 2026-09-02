@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ParticleCanvas } from './Particlecanvas';
+import { ParticleCanvas } from './ParticleCanvas';
 import { BootSequence } from './Bootsequence';
 import { GlassPanel } from './Glasspanel';
 import { EnterButton } from './Enterbutton';
