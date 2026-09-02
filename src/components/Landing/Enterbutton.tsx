@@ -6,7 +6,7 @@ interface EnterButtonProps {
   disabled?: boolean;
 }
 
-export function EnterButton({ onEnter, disabled }: EnterButtonProps) {
+export function Enterbutton({ onEnter, disabled }: EnterButtonProps) {
   const firedRef = useRef(false);
 
   const fire = () => {
