@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './PortalTransition.css';
+import './Portaltransition.css';
 
 type Stage = 'portal' | 'flash' | 'done';
 
