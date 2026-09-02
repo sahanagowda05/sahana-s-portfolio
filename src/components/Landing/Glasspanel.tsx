@@ -1,13 +1,13 @@
 import { type ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import './GlassPanel.css';
+import './Glasspanel.css';
 
-interface GlassPanelProps {
+interface GlasspanelProps {
   children: ReactNode;
   className?: string;
 }
 
-export function GlassPanel({ children, className }: GlassPanelProps) {
+export function Glasspanel({ children, className }: GlasspanelProps) {
   return (
     <motion.div
       className={`glass-panel ${className ?? ''}`.trim()}
