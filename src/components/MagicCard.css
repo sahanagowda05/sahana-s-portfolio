@@ -1,0 +1,43 @@
+.magic-card {
+  --mx: 50%;
+  --my: 50%;
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 0.8px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color var(--dur-base) ease, transform var(--dur-base) ease;
+}
+
+.magic-card--tilt {
+  transform: perspective(800px) rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+}
+
+.magic-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.magic-card__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    circle 220px at var(--mx) var(--my),
+    rgba(139, 92, 246, 0.18),
+    transparent 70%
+  );
+  transition: opacity var(--dur-base) ease;
+}
+
+.magic-card:hover .magic-card__glow {
+  opacity: 1;
+}
+
+.magic-card__content {
+  position: relative;
+  z-index: 1;
+}

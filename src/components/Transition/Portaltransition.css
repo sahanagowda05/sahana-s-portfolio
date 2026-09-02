@@ -1,0 +1,42 @@
+.portal-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.portal-transition__ring {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  width: 220vmax;
+  height: 220vmax;
+  border-radius: 999px;
+  transform-origin: center;
+  translate: -50% -50%;
+  background: radial-gradient(
+    circle,
+    #f4f1ea 0%,
+    #22d3ee 18%,
+    #4f7cff 34%,
+    #8b5cf6 52%,
+    rgba(139, 92, 246, 0) 70%
+  );
+  filter: blur(2px);
+}
+
+.portal-transition__flash {
+  position: absolute;
+  inset: 0;
+  background: #f4f1ea;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal-transition__ring {
+    transition: none !important;
+  }
+}

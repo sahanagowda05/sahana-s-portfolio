@@ -1,0 +1,190 @@
+.landing {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.landing__particles {
+  position: absolute;
+  inset: 0;
+}
+
+/* Soft vignette so the panel sits in a pocket of calm rather than fighting
+   the particle field for contrast. */
+.landing__scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 42%,
+    rgba(5, 5, 8, 0.55) 0%,
+    rgba(5, 5, 8, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.landing__stage {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.landing__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.landing__eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--cyan);
+  box-shadow: 0 0 12px 2px var(--cyan-glow);
+}
+
+.landing__headline {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: clamp(40px, 9vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.landing__letter-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.landing__letter {
+  display: inline-block;
+  background: linear-gradient(180deg, var(--text-primary) 0%, #cfc9e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* The three small squares that stand in for particles resolving into a
+   block — positioned around the letter's baseline, fade out as the glyph
+   fades in. */
+.landing__letter-blocks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.voxel-block {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+}
+
+.voxel-block--1 {
+  top: 10%;
+  left: 20%;
+  background: var(--violet);
+  box-shadow: 0 0 8px 1px var(--violet-glow);
+}
+
+.voxel-block--2 {
+  top: 55%;
+  left: 70%;
+  background: var(--blue);
+  box-shadow: 0 0 8px 1px var(--blue-glow);
+}
+
+.voxel-block--3 {
+  top: 75%;
+  left: 30%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px 1px var(--cyan-glow);
+}
+
+.landing__subhead {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.landing__roles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.enter-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: var(--space-2);
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  border: 0.8px solid var(--border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 20px 35px -14px var(--violet-glow),
+    0 1px 0 0 rgba(255, 255, 255, 0.08) inset;
+  transition:
+    box-shadow var(--dur-base) ease,
+    border-color var(--dur-base) ease;
+}
+
+.enter-button:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow:
+    0 20px 45px -10px var(--violet-glow),
+    0 1px 0 0 rgba(255, 255, 255, 0.12) inset;
+}
+
+.enter-button:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 3px;
+}
+
+.enter-button__arrow {
+  display: inline-block;
+  font-size: 14px;
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 640px) {
+  .landing__headline {
+    font-size: clamp(32px, 11vw, 48px);
+  }
+  .landing__subhead {
+    font-size: 13px;
+  }
+}
