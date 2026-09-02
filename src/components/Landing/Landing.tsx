@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ParticleCanvas } from './Particlecanvas';
-import { BootSequence } from './Bootsequence';
-import { GlassPanel } from './Glasspanel';
-import { EnterButton } from './Enterbutton';
+import { Particlecanvas } from './Particlecanvas';
+import { Bootsequence } from './Bootsequence';
+import { Glasspanel } from './Glasspanel';
+import { Enterbutton } from './Enterbutton';
 import './Landing.css';
 
 const NAME = 'SAHANA'.split('');
